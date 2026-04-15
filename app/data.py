@@ -17,7 +17,7 @@ QUESTIONS: Final[list[str]] = [
     "writes comments in code",
     "uses a mechanical keyboard",
     "has rewritten something from scratch",
-    "knows at least 3 languages",
+    "knows at least 3 programming languages",
     "has rage-quit a merge conflict",
     "uses multiple monitors",
     "has deployed at midnight",
