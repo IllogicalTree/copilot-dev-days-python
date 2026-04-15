@@ -6,7 +6,7 @@ body,
 }
 
 body {
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -160,4 +160,219 @@ button:disabled {
 
 .animate-\[bounce_0\.5s_ease-out\] {
     animation: bounce 0.5s ease-out;
+}
+
+/* ============================================================
+   Landing Page — Midnight Social
+   ============================================================ */
+
+.landing-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #080d1c;
+    position: relative;
+    overflow: hidden;
+    padding: 2.5rem 1.5rem;
+}
+
+/* Scrolling dot-grid background */
+.landing-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+    background-size: 28px 28px;
+    animation: grid-scroll 18s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes grid-scroll {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(28px); }
+}
+
+/* Ambient top glow */
+.landing-glow {
+    position: absolute;
+    width: 640px;
+    height: 480px;
+    top: -160px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: radial-gradient(ellipse at center, rgba(56, 189, 248, 0.14) 0%, transparent 65%);
+    animation: glow-breathe 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes glow-breathe {
+    0%, 100% { opacity: 0.7; transform: translateX(-50%) scale(1); }
+    50%       { opacity: 1;   transform: translateX(-50%) scale(1.08); }
+}
+
+/* Main content column */
+.landing-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 22rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+/* Staggered entrance animation shared by children */
+.landing-brand   { animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both; }
+.landing-card    { animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both; }
+.landing-cta     { animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.30s both; }
+.landing-footer  { animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.40s both; }
+
+@keyframes rise {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Brand block ---- */
+.landing-brand {
+    text-align: center;
+    width: 100%;
+}
+
+.brand-icon {
+    display: block;
+    font-size: 3.25rem;
+    line-height: 1;
+    margin-bottom: 0.875rem;
+    animation: icon-drop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0s both;
+    filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.45));
+}
+
+@keyframes icon-drop {
+    from { opacity: 0; transform: scale(0.4) rotate(-15deg); }
+    to   { opacity: 1; transform: scale(1)   rotate(0deg); }
+}
+
+.landing-title {
+    font-family: 'Syne', system-ui, sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: #f1f5f9;
+    margin: 0 0 0.6rem;
+}
+
+.brand-accent {
+    color: #38bdf8;
+    text-shadow: 0 0 32px rgba(56, 189, 248, 0.55);
+}
+
+.landing-tagline {
+    font-size: 0.875rem;
+    color: #475569;
+    margin: 0;
+    letter-spacing: 0.015em;
+}
+
+/* ---- How-to-play card ---- */
+.landing-card {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 1rem;
+    padding: 1.375rem 1.5rem;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.card-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #38bdf8;
+    margin: 0 0 1rem;
+}
+
+.card-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.card-steps li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.845rem;
+    color: #94a3b8;
+    line-height: 1.45;
+}
+
+.step-num {
+    flex-shrink: 0;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.22);
+    border-radius: 0.25rem;
+    padding: 0.18rem 0.38rem;
+    margin-top: 0.1rem;
+}
+
+/* ---- CTA button ---- */
+.landing-cta {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+    color: #ffffff;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.9375rem 2rem;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    box-shadow:
+        0 0 0 1px rgba(99, 102, 241, 0.25),
+        0 8px 28px rgba(14, 165, 233, 0.35),
+        0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.14s ease, box-shadow 0.14s ease, filter 0.14s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-cta::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+}
+
+.landing-cta:active {
+    transform: scale(0.97);
+    box-shadow:
+        0 0 0 1px rgba(99, 102, 241, 0.2),
+        0 4px 14px rgba(14, 165, 233, 0.25),
+        0 2px 4px rgba(0, 0, 0, 0.3);
+    filter: brightness(0.92);
+}
+
+/* ---- Footer hint ---- */
+.landing-footer {
+    font-size: 0.72rem;
+    color: #475569;
+    margin: 0;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
