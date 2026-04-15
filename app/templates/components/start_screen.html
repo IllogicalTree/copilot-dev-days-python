@@ -1,15 +1,17 @@
 <div id="game-container">
 <div class="flex flex-col items-center justify-center min-h-full p-6 bg-gray-50">
     <div class="text-center max-w-sm">
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">Soc Ops</h1>
-        <p class="text-lg text-gray-600 mb-8">Social Bingo</p>
+        <div class="chaos-emoji-bounce">🌀</div>
+        <h1 class="chaos-title chaos-title-primary">CHAOS</h1>
+        <h1 class="chaos-title chaos-title-secondary">BINGO</h1>
+        <p class="chaos-subtitle">Social Chaos Edition 💥</p>
 
-        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-            <h2 class="font-semibold text-gray-800 mb-3">How to play</h2>
-            <ul class="text-left text-gray-600 text-sm space-y-2">
-                <li>• Find people who match the questions</li>
-                <li>• Tap a square when you find a match</li>
-                <li>• Get 5 in a row to win!</li>
+        <div class="chaos-howto rounded-xl p-6 mb-8 chaos-card-enter">
+            <h2 class="chaos-howto-title">⚡ How to SURVIVE ⚡</h2>
+            <ul class="chaos-howto-list">
+                <li class="chaos-howto-item">🔥 Hunt down humans who match the chaos</li>
+                <li class="chaos-howto-item">💥 Smash a square when you find one</li>
+                <li class="chaos-howto-item">🏆 Get 5 in a row and UNLEASH CHAOS!</li>
             </ul>
         </div>
 
@@ -17,8 +19,8 @@
             hx-post="/start"
             hx-target="#game-container"
             hx-swap="outerHTML"
-            class="w-full bg-accent text-white font-semibold py-4 px-8 rounded-lg text-lg active:bg-accent-light transition-colors">
-            Start Game
+            class="w-full chaos-btn text-white font-bold py-4 px-8 rounded-lg">
+            🚀 UNLEASH THE CHAOS 🚀
         </button>
     </div>
 </div>
