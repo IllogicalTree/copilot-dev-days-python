@@ -257,13 +257,13 @@ button:disabled {
     background: linear-gradient(135deg, var(--neon-pink), var(--border-chaos), var(--neon-cyan));
     background-size: 300% 300%;
     animation: chaos-bg 3s ease infinite;
-    border: 3px solid var(--neon-yellow) !important;
+    border: 3px solid var(--neon-yellow);
     box-shadow: 0 0 20px var(--neon-pink), 0 0 40px rgba(255,45,120,0.4);
     transition: transform 0.1s, box-shadow 0.1s;
 }
 
 .chaos-btn:active {
-    transform: scale(0.95) rotate(-1deg) !important;
+    transform: scale(0.95) rotate(-1deg);
     box-shadow: 0 0 8px var(--neon-pink);
 }
 
@@ -275,64 +275,64 @@ button:disabled {
 .tilt-5 { transform: rotate(-1.2deg); }
 
 .bingo-square {
-    border: 2px solid var(--border-chaos) !important;
-    background: var(--bg-card2) !important;
-    color: var(--text-main) !important;
-    font-family: 'Nunito', 'Bangers', sans-serif !important;
-    font-size: 0.6rem !important;
-    font-weight: 700 !important;
+    border: 2px solid var(--border-chaos);
+    background: var(--bg-card2);
+    color: var(--text-main);
+    font-family: 'Nunito', 'Bangers', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
     letter-spacing: 0.02em;
-    transition: transform 0.15s, box-shadow 0.15s, background 0.15s !important;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
 }
 
 .bingo-square:hover:not(:disabled) {
-    transform: scale(1.08) rotate(1.5deg) !important;
+    transform: scale(1.08) rotate(1.5deg);
     box-shadow: 0 0 12px var(--neon-cyan), 0 0 4px var(--neon-cyan) inset;
     z-index: 2;
 }
 
 .bingo-square:active:not(:disabled) {
-    transform: scale(0.93) rotate(-2deg) !important;
+    transform: scale(0.93) rotate(-2deg);
 }
 
 .bingo-square.is-marked {
-    background: linear-gradient(135deg, rgba(57,255,20,0.3), rgba(0,245,255,0.2)) !important;
-    border-color: var(--neon-green) !important;
-    box-shadow: 0 0 10px var(--neon-green), inset 0 0 8px rgba(57,255,20,0.2) !important;
+    background: linear-gradient(135deg, rgba(57,255,20,0.3), rgba(0,245,255,0.2));
+    border-color: var(--neon-green);
+    box-shadow: 0 0 10px var(--neon-green), inset 0 0 8px rgba(57,255,20,0.2);
     animation: border-glow 2s ease infinite;
-    color: #ffffff !important;
+    color: #ffffff;
 }
 
 .bingo-square.is-winning {
-    background: linear-gradient(135deg, rgba(249,224,0,0.4), rgba(255,102,0,0.3)) !important;
-    border-color: var(--neon-yellow) !important;
-    box-shadow: 0 0 16px var(--neon-yellow), inset 0 0 10px rgba(249,224,0,0.3) !important;
-    animation: wiggle 0.4s ease-out, border-glow 1s ease infinite 0.4s !important;
-    color: var(--neon-yellow) !important;
+    background: linear-gradient(135deg, rgba(249,224,0,0.4), rgba(255,102,0,0.3));
+    border-color: var(--neon-yellow);
+    box-shadow: 0 0 16px var(--neon-yellow), inset 0 0 10px rgba(249,224,0,0.3);
+    animation: wiggle 0.4s ease-out, border-glow 1s ease infinite 0.4s;
+    color: var(--neon-yellow);
 }
 
 .bingo-square.is-free {
-    background: linear-gradient(135deg, rgba(123,47,247,0.4), rgba(255,45,120,0.3)) !important;
-    border-color: var(--neon-pink) !important;
-    box-shadow: 0 0 12px var(--neon-pink), inset 0 0 8px rgba(255,45,120,0.2) !important;
-    color: var(--neon-yellow) !important;
-    font-family: 'Bangers', cursive !important;
-    font-size: 0.75rem !important;
+    background: linear-gradient(135deg, rgba(123,47,247,0.4), rgba(255,45,120,0.3));
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 12px var(--neon-pink), inset 0 0 8px rgba(255,45,120,0.2);
+    color: var(--neon-yellow);
+    font-family: 'Bangers', cursive;
+    font-size: 0.75rem;
     letter-spacing: 2px;
 }
 
 /* Chaos header */
 .chaos-header {
     background: linear-gradient(90deg, var(--bg-dark), var(--bg-card), var(--bg-dark));
-    border-bottom: 2px solid var(--neon-pink) !important;
+    border-bottom: 2px solid var(--neon-pink);
     box-shadow: 0 2px 16px rgba(255,45,120,0.3);
 }
 
 /* Chaos bingo alert */
 .chaos-bingo-alert {
     background: linear-gradient(90deg, rgba(249,224,0,0.2), rgba(255,45,120,0.2), rgba(0,245,255,0.2));
-    border-bottom: 2px solid var(--neon-yellow) !important;
-    color: var(--neon-yellow) !important;
+    border-bottom: 2px solid var(--neon-yellow);
+    color: var(--neon-yellow);
     letter-spacing: 3px;
     text-transform: uppercase;
     animation: neon-pulse 1.5s ease infinite;
@@ -348,6 +348,9 @@ button:disabled {
 }
 
 .chaos-modal-title {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 0.25rem;
     background: linear-gradient(135deg, var(--neon-yellow), var(--neon-orange), var(--neon-pink));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -360,18 +363,18 @@ button:disabled {
 
 /* Back button */
 .chaos-back-btn {
-    color: var(--neon-cyan) !important;
-    border: 1px solid var(--neon-cyan) !important;
+    color: var(--neon-cyan);
+    border: 1px solid var(--neon-cyan);
     border-radius: 0.375rem;
     letter-spacing: 1px;
     font-size: 0.8rem;
     text-transform: uppercase;
     transition: all 0.15s;
-    background: rgba(0,245,255,0.05) !important;
+    background: rgba(0,245,255,0.05);
 }
 
 .chaos-back-btn:active {
-    background: rgba(0,245,255,0.2) !important;
+    background: rgba(0,245,255,0.2);
     transform: scale(0.95);
 }
 
@@ -384,13 +387,13 @@ button:disabled {
 
 /* Keep playing button in modal */
 .chaos-keep-btn {
-    background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan)) !important;
-    color: var(--bg-dark) !important;
+    background: linear-gradient(135deg, var(--neon-green), var(--neon-cyan));
+    color: var(--bg-dark);
     font-weight: 900;
     letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 1.1rem;
-    border: 2px solid var(--neon-green) !important;
+    border: 2px solid var(--neon-green);
     box-shadow: 0 0 16px var(--neon-green);
     transition: transform 0.1s, box-shadow 0.1s;
 }
@@ -447,3 +450,76 @@ button:disabled {
     text-transform: uppercase;
     opacity: 0.8;
 }
+
+/* Chaos start screen elements */
+.chaos-emoji-bounce {
+    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    animation: float 2s ease-in-out infinite;
+    display: inline-block;
+}
+
+.chaos-title-primary {
+    font-size: 3.5rem;
+    color: var(--neon-pink);
+    margin-bottom: 0;
+    display: block;
+}
+
+.chaos-title-secondary {
+    font-size: 3.5rem;
+    color: var(--neon-yellow);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.chaos-subtitle {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.85rem;
+    color: var(--neon-cyan);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.chaos-howto-title {
+    font-family: 'Bangers', cursive;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    color: var(--neon-yellow);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.chaos-howto-list {
+    font-family: 'Nunito', sans-serif;
+    text-align: left;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chaos-howto-item {
+    margin-bottom: 0.5rem;
+}
+
+/* Chaos modal elements */
+.chaos-modal-emoji {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    animation: float 1s ease-in-out infinite;
+    display: block;
+}
+
+.chaos-modal-subtitle {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.85rem;
+    color: var(--neon-cyan);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
